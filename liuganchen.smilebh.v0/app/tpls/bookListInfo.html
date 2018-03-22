@@ -1,0 +1,6 @@
+<div class="list-group" ng-repeat="hisbook in hisbooks">
+    <a ui-sref="bookInfo({bid:hisbook.id})" class="list-group-item">
+        <h4 class="list-group-item-heading">{{hisbook.name}}</h4>
+        <p class="list-group-item-text">{{hisbook.author}} : {{hisbook.info}}</p>
+    </a>
+</div>
