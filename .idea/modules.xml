@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/liuganchen.smilebh.v0/liuganchen.smilebh.v0.iml" filepath="$PROJECT_DIR$/liuganchen.smilebh.v0/liuganchen.smilebh.v0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liuganchen.smilebh.v1/liuganchen.smilebh.v1.iml" filepath="$PROJECT_DIR$/liuganchen.smilebh.v1/liuganchen.smilebh.v1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smileBookhouse.iml" filepath="$PROJECT_DIR$/smileBookhouse.iml" />
+    </modules>
+  </component>
+</project>
