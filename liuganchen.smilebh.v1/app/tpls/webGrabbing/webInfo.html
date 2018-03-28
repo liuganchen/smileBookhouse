@@ -1,0 +1,32 @@
+<div class="container" ng-controller="webGrabbingCtrl">
+    <div class="jumbotron">
+        广告位
+    </div>
+    <!--输入框-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">https://example.com/users/</span>
+                <input type="text" class="form-control" placeholder="输入网站" ng-model="formUrl">
+                <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="getFormUrlData()" type="button">检索</button>
+            </span>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <!--展示区域-->
+    <div class="row">
+        <div class="col-md-3 pre-scrollable" >
+            <div class="list-group" ng-repeat="bookChapter in formUrlData track by $index">
+                <a ui-sref="webGrabbing.chapterInfo({cid:bookChapter.id})" class="list-group-item">
+                  {{bookChapter.info}}
+                </a>
+            </div>
+        </div>
+        <div class="col-md-9 pre-scrollable">
+            <div ui-view></div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var myApp = angular.module('myApp', [
+const myApp = angular.module('myApp', [
     'ui.router'
 ]);
 myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -44,6 +44,15 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
         {
             url: '/bookStore',
             templateUrl: '../tpls/bookstore/boostore.html'
+        }).state('webGrabbing',
+        {
+            url: '/webGrabbing',
+            templateUrl: '../tpls/webGrabbing/webInfo.html'
+        }).state('webGrabbing.chapterInfo',
+        {
+            url: "/chapterInfo/{cid}",
+            templateUrl: "../tpls/webGrabbing/chapterInfo.html",
+            controller: 'chapterController'
         })
 
 
@@ -51,13 +60,13 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, 
 myApp.service('getBookListService', function ($http, $q) {
     this.name = "service";
     this.getHisBookList = function () {
-        var res = $q.defer();
+        let res = $q.defer();
         $http({
             method: "GET",
             url: '../data/hisBookList.json'
         }).then(function (data) {
             res.resolve(data);
-        }, function (da) {
+        }, function () {
             res.reject('error');
         });
         return res.promise;
@@ -74,8 +83,8 @@ myApp.controller('app-controller', function ($scope, getBookListService) {
 myApp.controller('book-info-controller', function ($scope, $http, $stateParams) {
 
     $http.get("../data/hisBookList.json").then(function (data) {
-        for (var i = 0; i < data.data.length; i++) {
-            if ($stateParams.bid == parseInt(data.data[i].id)) {
+        for (let i = 0; i < data.data.length; i++) {
+            if ($stateParams.bid === parseInt(data.data[i].id)) {
                 $scope.book = data.data[i];
             }
         }
