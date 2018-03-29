@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/liuganchen.smilebh.v0/liuganchen.smilebh.v0.iml" filepath="$PROJECT_DIR$/liuganchen.smilebh.v0/liuganchen.smilebh.v0.iml" />
       <module fileurl="file://$PROJECT_DIR$/liuganchen.smilebh.v1/liuganchen.smilebh.v1.iml" filepath="$PROJECT_DIR$/liuganchen.smilebh.v1/liuganchen.smilebh.v1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liuganchen.smilebh.v2/liuganchen.smilebh.v2.iml" filepath="$PROJECT_DIR$/liuganchen.smilebh.v2/liuganchen.smilebh.v2.iml" />
       <module fileurl="file://$PROJECT_DIR$/smileBookhouse.iml" filepath="$PROJECT_DIR$/smileBookhouse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
     </modules>
   </component>
 </project>
